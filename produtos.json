@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "nome": "Fleet Basic",
+        "alias": "ft.basic",
+        "img": "/img/ftbasic.png",
+        "pag": "/pag/ft.basic.html"
+    },
+    {
+        "id": 2,
+        "nome": "Fleet Full Jornada",
+        "alias": "ft.full.jor",
+        "img": "/img/ftfulljor.png",
+        "pag": "/pag/ft.full.jor.html"
+    },
+    {
+        "id": 3,
+        "nome": "Fleet Full Guincho",
+        "alias": "ft.full.gui",
+        "img": "/img/ftfullgui.png",
+        "pag": "/pag/ft.full.guincho.html"
+    }
+  
+]

@@ -3,28 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <!-- Bootstrap v5.3.2 -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.min.js"></script> -->
+
     <title>Quatenus MyChoice</title>
 </head>
-<body>
-
-    <h1>Quatenus MyChoice</h1>
-    <p style="margin-top: -20px;">Versão: acabei de nascer</p>
-
-    <h2>Selecione os atributos que você precisa:</h2>
-    <div>
-
-        
-        
+<body style="height: 100vh;">
+    
+    <div class="search-wrapper">
+        <label for="serach">Procure produtos</label>
+        <input type="search" name="search" id="search" data-search>
     </div>
 
-    <div>
-        <button onclick="produto()" style="margin-top: 55px;">Buscar</button>
+    <div class="produtos-card" data-produtos-cards-container>
+        <template data-produtos-template>
+            <div class="card">
+                <a data-pag><div class="header" id="header" data-header></div></a>
+                <div class="body" id="body" data-body></div>
+            </div>
+        </template>
     </div>
 
-    <div>
-        <p id="resposta"></p>
-    </div>
 
-    <script src="js/script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 </body>
 </html>
