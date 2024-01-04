@@ -16,16 +16,18 @@
 
 <body>
     
+  <!-- Navbar -->
   <header>
-    <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="navbar qorange shadow-sm">
       <div class="container">
         <a href="#" class="navbar-brand d-flex align-items-center">
-          <strong>Quatenus MyChoice</strong>
+          <strong style="color: white;">Quatenus MyChoice</strong>
         </a>
       </div>
     </div>
   </header>
 
+  <!-- Conteudo -->
   <main>
     <div class="album py-5 bg-light">
       <div class="container">
@@ -42,19 +44,19 @@
             <div class="col">
 
               <!-- Pode colocar h-100 na div abaixo e tirar o height para deixar o cartão no tamanho certo dependendo do do tamanho da descrição, optei por deixar um valor fixo (desculpa) para contornar isso -->
-              <div class="card shadow-sm" style="height: 450px;">
-                <img class="card-img-top" width="100%" height="225" data-img>
+              <div class="card shadow-sm" style="height: 450px;" id="card">
+                <img class="card-img-top" width="100%" height="225" id="card-img" data-img>
   
                 <div class="card-body">
                   <!-- Nome aqui -->
-                  <h3 data-nome>nome aqui</h2>
+                  <h3 data-nome>erro</h2>
   
                   <!-- Descrição aqui -->
-                  <p class="card-text" data-desc>descrição aqui</p>
+                  <p class="card-text" data-desc>erro</p>
                 </div>
 
                 <div class="m-3">
-                  <a data-link><button type="button" class="btn btn-sm btn-qblue">Página do Produto</button></a>
+                  <a data-link target=”_blank”><button type="button" class="btn btn-sm btn-qblue">Página do Produto</button></a>
                 </div>
               </div>
             </div>
@@ -63,6 +65,17 @@
       </div>
     </div>        
   </main>
+
+  <!-- Rodapé -->
+  <footer class="text-muted py-5">
+    <div class="container">
+      <p class="float-end mb-1">
+        <a href="#">Voltar ao Início</a>
+      </p>
+      <p class="mb-1">&copy; Quatenus MyChoice</p>
+      <p class="mb-0">Criado por <a href="https://kerstenbr.github.io/SitePei/" target=”_blank”>Projetos e Inovações</a>.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
