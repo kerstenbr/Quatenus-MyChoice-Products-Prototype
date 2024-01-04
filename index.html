@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    
+  <!-- TODO: Refazer o design da navbar caso a Fran aprove, ta muito feio agora. -->
   <!-- Navbar -->
   <header>
     <div class="navbar qorange shadow-sm">
@@ -43,7 +43,7 @@
           <template data-produtos-template>
             <div class="col">
 
-              <!-- Pode colocar h-100 na div abaixo e tirar o height para deixar o cartão no tamanho certo dependendo do do tamanho da descrição, optei por deixar um valor fixo (desculpa) para contornar isso -->
+              <!-- FIXME: Pode colocar h-100 na div abaixo e tirar o height para deixar o cartão no tamanho certo dependendo do do tamanho da descrição, optei por deixar um valor fixo (desculpa) para contornar isso -->
               <div class="card shadow-sm" style="height: 450px;" id="card">
                 <img class="card-img-top" width="100%" height="225" id="card-img" data-img>
   
@@ -54,9 +54,9 @@
                   <!-- Descrição aqui -->
                   <p class="card-text" data-desc>erro</p>
                 </div>
-
+                <!-- FIXME: Arrumar o botão, tirar esse m-3 horrivel que ta fudendo a porra da posição do botão dependendo do tamanhão da tela/descrição -->
                 <div class="m-3">
-                  <a data-link target=”_blank”><button type="button" class="btn btn-sm btn-qblue">Página do Produto</button></a>
+                  <a data-link target=”_blank”><button type="button" class="btn btn-sm btn-qblue">PDF do Produto</button></a>
                 </div>
               </div>
             </div>
@@ -74,6 +74,8 @@
       </p>
       <p class="mb-1">&copy; Quatenus MyChoice</p>
       <p class="mb-0">Criado por <a href="https://kerstenbr.github.io/SitePei/" target=”_blank”>Projetos e Inovações</a>.</p>
+      <!-- TODO: Adicionar uma função no js para eu somente mudar a variavel lá e mudar a versão aqui -->
+      <p>v1.0.0</p>
     </div>
   </footer>
 

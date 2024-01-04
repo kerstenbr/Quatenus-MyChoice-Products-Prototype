@@ -23,6 +23,7 @@ fetch("/produtos.json")
         // Aqui estou passando pelo arquivo json e no final retorno um map de objetos dele (usado para a pesquisa)
         produtos = data.map(produto => {
             // console.log(produto)
+            // TODO: Tenho que adicionar TAGS no json e procurar por elas aqui, lembrando que vão ser arrays.....
             const card = produtosCardTemplate.content.cloneNode(true).children[0]
             const img = card.querySelector("[data-img]")
             const nome = card.querySelector("[data-nome]")
