@@ -29,11 +29,12 @@ fetch("/produtos.json")
             
             pag.setAttribute("href", produto.pag)
             header.textContent = produto.nome
-            body.textContent = produto.alias
+            body.textContent = produto.apelido
 
             produtosCardContainer.append(card)
 
             // Aqui eu retorno um objeto para ser usado na busca.
-            return {nome: produto.nome, apelido: produto.alias, element: card}
+            // No futuro se eu quiser adicionar tags por exemplo, tenho que adicionar elas aqui também!
+            return {nome: produto.nome, apelido: produto.apelido, element: card}
         });
     });

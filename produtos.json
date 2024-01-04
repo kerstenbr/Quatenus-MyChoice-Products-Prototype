@@ -2,35 +2,35 @@
     {
         "id": 1,
         "nome": "Fleet Basic",
-        "alias": "ft.basic",
+        "apelido": "ft.basic",
         "img": "/img/ftbasic.png",
         "pag": "/pag/ft.basic.html"
     },
     {
         "id": 2,
         "nome": "Fleet Full Jornada",
-        "alias": "ft.full.jor",
+        "apelido": "ft.full.jor",
         "img": "/img/ftfulljor.png",
         "pag": "/pag/ft.full.jor.html"
     },
     {
         "id": 3,
         "nome": "Fleet Full Guincho",
-        "alias": "ft.full.gui",
+        "apelido": "ft.full.gui",
         "img": "/img/ftfullgui.png",
         "pag": "/pag/ft.full.guincho.html"
     }, 
     {
         "id": 4,
         "nome": "Fleet Full Can",
-        "alias": "ft.full.can",
+        "apelido": "ft.full.can",
         "img": "/img/ftfullcan.png",
         "pag": "/pag/ft.full.can.html"
     }, 
     {
         "id": 5,
         "nome": "Fleet Full Jornada Can",
-        "alias": "ft.full.jor.can",
+        "apelido": "ft.full.jor.can",
         "img": "/img/ftfulljorcan.png",
         "pag": "/pag/ft.full.jor.can.html"
     }
