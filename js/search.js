@@ -10,6 +10,7 @@ let produtos = [];
 searchInput.addEventListener("input", (e) => {
     const value = e.target.value.toLowerCase()
     produtos.forEach(produto => {
+        console.log(value)
         const isVisible = value.split(' ').every(word => produto.nome.toLowerCase().includes(word)) || value.split('.').every(word => produto.apelido.toLowerCase().includes(word))
         produto.element.classList.toggle("hide", !isVisible)
     })
@@ -23,13 +24,16 @@ fetch("/produtos.json")
         produtos = data.map(produto => {
             // console.log(produto)
             const card = produtosCardTemplate.content.cloneNode(true).children[0]
-            const header = card.querySelector("[data-header]")
-            const body = card.querySelector("[data-body]")
-            const pag = card.querySelector("[data-pag]")
+            const img = card.querySelector("[data-img]")
+            const nome = card.querySelector("[data-nome]")
+            const desc = card.querySelector("[data-desc]")
+            const link = card.querySelector("[data-link]")
             
-            pag.setAttribute("href", produto.pag)
-            header.textContent = produto.nome
-            body.textContent = produto.apelido
+            nome.textContent = produto.nome
+            desc.textContent = produto.desc
+            img.setAttribute("src", produto.img)
+            link.setAttribute("href", produto.link)
+            // desc.textContent = produto.apelido
 
             produtosCardContainer.append(card)
 

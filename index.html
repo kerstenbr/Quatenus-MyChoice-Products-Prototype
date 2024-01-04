@@ -7,27 +7,62 @@
     <script src="js/search.js" defer></script>
 
     <!-- Bootstrap v5.3.2 -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/bootstrap.bundle.min.js"></script> -->
+    
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <script src="js/bootstrap/bootstrap.js"></script>
 
     <title>Quatenus MyChoice</title>
 </head>
 
-<body style="height: 100vh;">
+<body>
     
-    <div class="search-wrapper">
-        <label for="serach">Procure produtos</label>
-        <input type="search" name="search" id="search" data-search>
+  <header>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <strong>Quatenus MyChoice</strong>
+        </a>
+      </div>
     </div>
+  </header>
 
-    <div class="produtos-card" data-produtos-cards-container>
-        <template data-produtos-template>
-            <div class="card">
-                <a data-pag><div class="header" id="header" data-header></div></a>
-                <div class="body" id="body" data-body></div>
+  <main>
+    <div class="album py-5 bg-light">
+      <div class="container">
+          
+        <div class="input">
+            <div class="form-outline mb-3">
+                <input type="search" id="form1" class="form-control" placeholder="Digite aqui" aria-label="Search" data-search/>
             </div>
-        </template>
-    </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" data-produtos-cards-container>
+          
+          <template data-produtos-template>
+            <div class="col">
+
+              <!-- Pode colocar h-100 na div abaixo e tirar o height para deixar o cartão no tamanho certo dependendo do do tamanho da descrição, optei por deixar um valor fixo (desculpa) para contornar isso -->
+              <div class="card shadow-sm" style="height: 450px;">
+                <img class="card-img-top" width="100%" height="225" data-img>
+  
+                <div class="card-body">
+                  <!-- Nome aqui -->
+                  <h3 data-nome>nome aqui</h2>
+  
+                  <!-- Descrição aqui -->
+                  <p class="card-text" data-desc>descrição aqui</p>
+                </div>
+
+                <div class="m-3">
+                  <a data-link><button type="button" class="btn btn-sm btn-qblue">Página do Produto</button></a>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>        
+  </main>
 
 </body>
 </html>
