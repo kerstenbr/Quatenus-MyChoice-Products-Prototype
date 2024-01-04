@@ -1,7 +1,7 @@
 const produtosCardTemplate = document.querySelector("[data-produtos-template]");
 const produtosCardContainer = document.querySelector("[data-produtos-cards-container]");
 const searchInput = document.querySelector("[data-search]");
-
+// TODO: Lembrar o por que disso
 let produtos = [];
 
 // Essa parte esconde o card caso o input do usuário seja diferente do NOME ou APELIDO no arquivo JASON
