@@ -19,6 +19,14 @@
         "alias": "ft.full.gui",
         "img": "/img/ftfullgui.png",
         "pag": "/pag/ft.full.guincho.html"
+    }, 
+    {
+        "id": 4,
+        "nome": "Fleet Full Can",
+        "alias": "ft.full.can",
+        "img": "/img/ftfullcan.png",
+        "pag": "/pag/ft.full.can.html"
     }
+
   
 ]
