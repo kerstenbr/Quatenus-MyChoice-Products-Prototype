@@ -3278,6 +3278,7 @@
       return NAME$4;
     }
 
+    
     // Public
     enable() {
       this._isEnabled = true;

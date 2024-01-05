@@ -2,7 +2,7 @@
     {
         "nome": "Fleet Basic",
         "apelido": "ft.basic",
-        "desc": "Nosso produto mais básico",
+        "desc": "Nosso produto básico, oferece localização ",
         "img": "/img/ftbasic.png",
         "link": "/pag/ft.basic.html"
     },

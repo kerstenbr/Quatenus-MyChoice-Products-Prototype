@@ -1,12 +1,10 @@
 const produtosCardTemplate = document.querySelector("[data-produtos-template]");
 const produtosCardContainer = document.querySelector("[data-produtos-cards-container]");
 const searchInput = document.querySelector("[data-search]");
-// TODO: Lembrar o por que disso
+
 let produtos = [];
 
-// Essa parte esconde o card caso o input do usuário seja diferente do NOME ou APELIDO no arquivo JASON
-// Acho que da pra melhorar muito isso, atualmente não da para digitar fleet jornada por exemplo, tem
-// que escrever fleet full jornada certinho. Por isso o elastic serach é 1000x melhor nesse quesito.
+// Essa parte esconde o card caso o input do usuário seja diferente do NOME ou APELIDO no arquivo JSON
 searchInput.addEventListener("input", (e) => {
     const value = e.target.value.toLowerCase()
     produtos.forEach(produto => {
@@ -39,7 +37,7 @@ fetch("/produtos.json")
             produtosCardContainer.append(card)
 
             // Aqui eu retorno um objeto para ser usado na busca.
-            // No futuro se eu quiser adicionar tags por exemplo, tenho que adicionar elas aqui também!
+            // No futuro se eu quiser adicionar tags por exemplo, tenho que adicionar elas aqui também
             return {nome: produto.nome, apelido: produto.apelido, element: card}
         });
     });
