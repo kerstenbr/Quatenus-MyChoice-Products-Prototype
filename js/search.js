@@ -11,12 +11,15 @@ searchInput.addEventListener("input", (e) => {
         console.log(value)
         const isVisible = value.split(' ').every(word => produto.nome.toLowerCase().includes(word)) || value.split('.').every(word => produto.apelido.toLowerCase().includes(word))
         produto.element.classList.toggle("hide", !isVisible)
-        // TODO:  Caso não encontre nenhum produto, mostre uma mensagem de erro. Lembrar de resetar caso a pessoa procure por um produto!
-        // if (isVisible == ""){
-        //     let footer = document.getElementById("footer")
-
-        //     footer.style.backgroundColor = "black"
-        // }
+        // TODO:  Caso não encontre nenhum produto, mostre uma mensagem de erro. Lembrar de resetar caso a pessoa procure por um produto!]
+        //FIXME: Por algum motivo que eu não entendi até agora, se tu digitar ft.b o erro aparece
+        if (isVisible == " "){
+            let avisoErro = document.getElementById("avisoDeErro")
+            avisoErro.classList.remove('d-none')
+        } else {
+            let avisoErro = document.getElementById("avisoDeErro")
+            avisoErro.classList.add('d-none');
+        }
     })
 })
 
