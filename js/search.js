@@ -12,7 +12,7 @@ searchInput.addEventListener("input", (e) => {
         const isVisible = value.split(' ').every(word => produto.nome.toLowerCase().includes(word)) || value.split('.').every(word => produto.apelido.toLowerCase().includes(word))
         produto.element.classList.toggle("hide", !isVisible)
         // TODO:  Caso não encontre nenhum produto, mostre uma mensagem de erro. Lembrar de resetar caso a pessoa procure por um produto!]
-        // FIXME: Por algum motivo que eu não entendi até agora, se tu digitar ft.b o erro aparece
+        // FIXME: Por algum motivo que eu não entendi até agora, se tu digitar um produto que não tenha 2 respostas, exemplo: ft.basic ou ft.guincho, a mensagem de erro também aparece...
         // if (isVisible == " "){
         //     let avisoErro = document.getElementById("avisoDeErro")
         //     avisoErro.classList.remove('d-none')
