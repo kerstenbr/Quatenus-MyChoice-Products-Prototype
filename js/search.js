@@ -32,14 +32,16 @@ fetch("/produtos.json")
             // console.log(produto)
             // TODO: Tenho que adicionar TAGS no json e procurar por elas aqui, lembrando que vão ser arrays.....
             const card = produtosCardTemplate.content.cloneNode(true).children[0]
-            const img = card.querySelector("[data-img]")
             const nome = card.querySelector("[data-nome]")
             const desc = card.querySelector("[data-desc]")
+            const img = card.querySelector("[data-img]")
+            const imgLink = card.querySelector("[data-img-link]")
             const link = card.querySelector("[data-link]")
             
             nome.textContent = produto.nome
             desc.textContent = produto.desc
             img.setAttribute("src", produto.img)
+            imgLink.setAttribute("href", produto.link) // Tive que fazer dessa forma pro link funcionar, vai saber.
             link.setAttribute("href", produto.link)
             // desc.textContent = produto.apelido
 
