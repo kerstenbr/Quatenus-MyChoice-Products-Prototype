@@ -11,16 +11,16 @@ searchInput.addEventListener("input", (e) => {
         console.log(value)
         const isVisible = value.split(' ').every(word => produto.nome.toLowerCase().includes(word)) || value.split('.').every(word => produto.apelido.toLowerCase().includes(word))
         produto.element.classList.toggle("hide", !isVisible)
-        // TODO:  Caso não encontre nenhum produto, mostre uma mensagem de erro. Lembrar de resetar caso a pessoa procure por um produto!]
-        // FIXME: Por algum motivo que eu não entendi até agora, se tu digitar um produto que não tenha 2 respostas, exemplo: ft.basic ou ft.guincho, a mensagem de erro também aparece...
-        // if (!isVisible){
-        //     let avisoErro = document.getElementById("avisoDeErro")
-        //     avisoErro.classList.remove('d-none')
-        // } else {
-        //     let avisoErro = document.getElementById("avisoDeErro")
-        //     avisoErro.classList.add('d-none');
-        // }
     })
+    // TODO:  Caso não encontre nenhum produto, mostre uma mensagem de erro. Lembrar de resetar caso a pessoa procure por um produto!]
+    // FIXME: Por algum motivo que eu não entendi até agora, se tu digitar um produto que não tenha 2 respostas, exemplo: ft.basic ou ft.guincho, a mensagem de erro também aparece...
+    // if (!isVisible){
+    //     let avisoErro = document.getElementById("avisoDeErro")
+    //     avisoErro.classList.remove('d-none')
+    // } else {
+    //     let avisoErro = document.getElementById("avisoDeErro")
+    //     avisoErro.classList.add('d-none');
+    // }
 })
 
 // Essa parte é responsavel por ler o arquivo json
