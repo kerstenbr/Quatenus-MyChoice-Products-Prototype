@@ -12,7 +12,6 @@ searchInput.addEventListener("input", (e) => {
         const isVisible = value.split(' ').every(word => produto.nome.toLowerCase().includes(word)) || value.split('.').every(word => produto.apelido.toLowerCase().includes(word))
         produto.element.classList.toggle("hide", !isVisible)
     })
-    // TODO:  Caso não encontre nenhum produto, mostre uma mensagem de erro. Lembrar de resetar caso a pessoa procure por um produto!]
     // FIXME: Por algum motivo que eu não entendi até agora, se tu digitar um produto que não tenha 2 respostas, exemplo: ft.basic ou ft.guincho, a mensagem de erro também aparece...
     // if (!isVisible){
     //     let avisoErro = document.getElementById("avisoDeErro")
@@ -23,14 +22,12 @@ searchInput.addEventListener("input", (e) => {
     // }
 })
 
-// Essa parte é responsavel por ler o arquivo json
+// Parte responsável por ler o Json e retornar as informações para a pesquisa e também para o card
 fetch("/produtos.json")
     .then(res => res.json())
     .then(data => {
-        // Aqui estou passando pelo arquivo json e no final retorno um map de objetos dele (usado para a pesquisa)
         produtos = data.map(produto => {
             // console.log(produto)
-            // TODO: Tenho que adicionar TAGS no json e procurar por elas aqui, lembrando que vão ser arrays.....
             const card = produtosCardTemplate.content.cloneNode(true).children[0]
             const nome = card.querySelector("[data-nome]")
             const desc = card.querySelector("[data-desc]")
@@ -48,7 +45,6 @@ fetch("/produtos.json")
             produtosCardContainer.append(card)
 
             // Aqui eu retorno um objeto para ser usado na busca.
-            // No futuro se eu quiser adicionar tags por exemplo, tenho que adicionar elas aqui também
             return {nome: produto.nome, apelido: produto.apelido, element: card}
         });
     });
