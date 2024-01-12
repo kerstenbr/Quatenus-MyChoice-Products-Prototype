@@ -12,7 +12,7 @@ searchInput.addEventListener("input", (e) => {
         const isVisible = value.split(' ').every(word => produto.nome.toLowerCase().includes(word)) || value.split('.').every(word => produto.apelido.toLowerCase().includes(word))
         produto.element.classList.toggle("hide", !isVisible)
     })
-    // FIXME: Por algum motivo que eu não entendi até agora, se tu digitar um produto que não tenha 2 respostas, exemplo: ft.basic ou ft.guincho, a mensagem de erro também aparece...
+    // FIXME: Stackoverflow: As you have added the logic to display the error message inside the forEach loop, and as the loop runs for each product, if any of the products from the list does not match the search value, then an error message will be displayed, and also the matched products will be displayed.
     // if (!isVisible){
     //     let avisoErro = document.getElementById("avisoDeErro")
     //     avisoErro.classList.remove('d-none')
