@@ -27,12 +27,3 @@
 .qorange {
     background: #F36E21;
 }
-
-#card {
-    overflow: hidden;
-}
-
-#card-img:hover {
-    transition: 0.90s ease;
-    transform: scale(1.1);
-}

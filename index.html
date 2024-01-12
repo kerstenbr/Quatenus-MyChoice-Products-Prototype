@@ -54,12 +54,12 @@
           </div>
         </div> -->
 
-        <!-- Cards -->
+        <!-- Template -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" data-produtos-cards-container>
           <template data-produtos-template>
             <div class="col">
 
-              <!-- FIXME: Pode colocar h-100 na div abaixo e tirar o height para deixar o cartão no tamanho certo dependendo do do tamanho da descrição, optei por deixar um valor fixo (desculpa) para contornar isso -->
+              <!-- Card -->
               <div class="card shadow-sm" style="height: 450px;" id="card">
                 <a data-img-link target=”_blank” rel="noopener noreferrer">
                   <img class="card-img-top" width="100%" height="225" id="card-img" data-img>
@@ -67,18 +67,19 @@
   
                 <div class="card-body">
                   <!-- Nome aqui -->
-                  <!-- TODO: Ver o que fazer caso o nome seja muito grande. Tem uns produtos enormes -->
                   <h3 data-nome>404</h2>
   
                   <!-- Descrição aqui -->
                   <p class="card-text" data-desc>404</p>
                 </div>
-                <!-- FIXME: Arrumar o botão, tirar esse m-3 horrivel que ta fudendo a porra da posição do botão dependendo do tamanhão da tela/descrição -->
+
                 <div class="ms-3 mb-3">
-                  <a data-link target=”_blank” rel="noopener noreferrer"><button type="button" class="btn btn-sm btn-qblue">Ver mais</button></a>
+                  <button type="button" class="btn btn-sm btn-qblue" data-unico-nome="${produto.nome}" data-btn-ver-mais>Ver mais</button>
                 </div>
               </div>
+
             </div>
+            
           </template>
         </div>
 

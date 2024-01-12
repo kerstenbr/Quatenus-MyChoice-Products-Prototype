@@ -28,20 +28,62 @@ fetch("/produtos.json")
     .then(data => {
         produtos = data.map(produto => {
             // console.log(produto)
+
+            // Cards
             const card = produtosCardTemplate.content.cloneNode(true).children[0]
             const nome = card.querySelector("[data-nome]")
             const desc = card.querySelector("[data-desc]")
             const img = card.querySelector("[data-img]")
-            const imgLink = card.querySelector("[data-img-link]")
-            const link = card.querySelector("[data-link]")
-            
+            const btnVerMais = card.querySelector("[data-btn-ver-mais]");
+            // const link = card.querySelector("[data-link]")
+
             nome.textContent = produto.nome
             desc.textContent = produto.desc
             img.setAttribute("src", produto.img)
-            imgLink.setAttribute("href", produto.link) // Tive que fazer dessa forma pro link funcionar, vai saber.
-            link.setAttribute("href", produto.link)
-            // desc.textContent = produto.apelido
 
+            btnVerMais.setAttribute("data-unico-nome", produto.nome);
+            
+            // Essa parte é necessária para que o botão Ver Mais crie um modal para o produto!
+            btnVerMais.addEventListener("click", () => {
+                // Obtenha o nome do produto associado ao botão clicado
+                const nomeUnicoProduto = btnVerMais.getAttribute("data-unico-nome");
+        
+                // Crie um id dinâmico para o modal usando o nome do produto
+                const modalId = `exampleModal-${nomeUnicoProduto}`;
+        
+                // Verifique se o modal já foi criado, se não, crie e adicione ao DOM
+                let modalElement = document.getElementById(modalId);
+                if (!modalElement) {
+                    modalElement = document.createElement('div');
+                    modalElement.id = modalId;
+                    modalElement.classList.add('modal', 'fade');
+                    // id="${modalId} //${produto.nome} //${produto.desc}
+                    modalElement.innerHTML = `
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="${modalId}">${produto.nome}</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>${produto.desc}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-qblue" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    document.body.appendChild(modalElement);
+                }
+        
+                // Abra o modal correspondente ao produto
+                const modal = new bootstrap.Modal(modalElement);
+                modal.show();
+        
+                console.log("Nome do Produto no Modal:", nomeUnicoProduto);
+            });
+    
             produtosCardContainer.append(card)
 
             // Aqui eu retorno um objeto para ser usado na busca.
