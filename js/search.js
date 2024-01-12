@@ -7,19 +7,19 @@ let produtos = [];
 // Essa parte esconde o card caso o input do usuário seja diferente do NOME ou APELIDO no arquivo JSON
 searchInput.addEventListener("input", (e) => {
     const value = e.target.value.toLowerCase()
+    let algumProdutoCorresponde = false;
+
     produtos.forEach(produto => {
         console.log(value)
         const isVisible = value.split(' ').every(word => produto.nome.toLowerCase().includes(word)) || value.split('.').every(word => produto.apelido.toLowerCase().includes(word))
         produto.element.classList.toggle("hide", !isVisible)
+
+        if (isVisible) {
+            algumProdutoCorresponde = true;
+        }
     })
-    // FIXME: Stackoverflow: As you have added the logic to display the error message inside the forEach loop, and as the loop runs for each product, if any of the products from the list does not match the search value, then an error message will be displayed, and also the matched products will be displayed.
-    // if (!isVisible){
-    //     let avisoErro = document.getElementById("avisoDeErro")
-    //     avisoErro.classList.remove('d-none')
-    // } else {
-    //     let avisoErro = document.getElementById("avisoDeErro")
-    //     avisoErro.classList.add('d-none');
-    // }
+    let avisoErro = document.getElementById("avisoDeErro");
+    avisoErro.classList.toggle('d-none', algumProdutoCorresponde);
 })
 
 // Parte responsável por ler o Json e retornar as informações para a pesquisa e também para o card
