@@ -27,7 +27,7 @@ fetch("/produtos.json")
     .then(res => res.json())
     .then(data => {
         produtos = data.map(produto => {
-            // console.log(produto)
+            console.log("Produto encontrado: " + produto.nome)
 
             // Cards
             const card = produtosCardTemplate.content.cloneNode(true).children[0]
