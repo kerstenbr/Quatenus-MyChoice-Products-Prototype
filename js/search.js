@@ -10,7 +10,7 @@ searchInput.addEventListener("input", (e) => {
     let algumProdutoCorresponde = false;
 
     produtos.forEach(produto => {
-        console.log(value)
+        // console.log(value)
         const isVisible = value.split(' ').every(word => produto.nome.toLowerCase().includes(word)) || value.split('.').every(word => produto.apelido.toLowerCase().includes(word))
         produto.element.classList.toggle("hide", !isVisible)
 
