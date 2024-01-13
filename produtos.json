@@ -3,30 +3,35 @@
         "nome": "Fleet Basic",
         "apelido": "ft.basic",
         "desc": "Nosso produto básico, oferece localização ",
-        "img": "/img/ftbasic.png"
+        "img": "/img/ftbasic.png",
+        "descModal": "Nosso produto básico, oferece localização, perfeito para blablabla Nosso produto básico, oferece localização, perfeito para blablabla"
     },
     {
         "nome": "Fleet Full Jornada",
         "apelido": "ft.full.jor",
         "desc": "Produto indicado para clientes que querem ter controle sobre a jornada de seus motoristas",
-        "img": "/img/ftfulljor.png"
+        "img": "/img/ftfulljor.png",
+        "descModal": "Produto indicado para clientes que querem ter controle sobre a jornada de seus motoristas blablabla Produto indicado para clientes que querem ter controle sobre a jornada de seus motoristas blablabla"
     },
     {
         "nome": "Fleet Full Guincho",
         "apelido": "ft.full.gui",
         "desc": "Produto específico para guinchos",
-        "img": "/img/ftfullgui.png"
+        "img": "/img/ftfullgui.png",
+        "descModal": "Produto específico para guinchos por que blablabla Produto específico para guinchos por que blablabla"
     }, 
     {
         "nome": "Fleet Full Can",
         "apelido": "ft.full.can",
         "desc": "Este produto é utilizado para acessar a can do veículo. Dependendo do modelo conseguimos trazer informações como: RPM, temperatura do motor, hodômetro e etc.",
-        "img": "/img/ftfullcan.png"
+        "img": "/img/ftfullcan.png",
+        "descModal": "Este produto é utilizado para acessar a can do veículo. Dependendo do modelo conseguimos trazer informações como: RPM, temperatura do motor, hodômetro e etc. blablabla Este produto é utilizado para acessar a can do veículo. Dependendo do modelo conseguimos trazer informações como: RPM, temperatura do motor, hodômetro e etc. blablabla"
     }, 
     {
         "nome": "Fleet Full Jornada Can",
         "apelido": "ft.full.jor.can",
         "desc": "Proporciona o controle sobre a jornada do motorista e também consegue trazer os dados da can do veículo.",
-        "img": "/img/ftfulljorcan.png"
+        "img": "/img/ftfulljorcan.png",
+        "descModal": "Proporciona o controle sobre a jornada do motorista e também consegue trazer os dados da can do veículo. blablabla Proporciona o controle sobre a jornada do motorista e também consegue trazer os dados da can do veículo. blablabla"
     }
 ]

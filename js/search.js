@@ -66,7 +66,7 @@ fetch("/produtos.json")
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>${produto.desc}</p>
+                                    <p>${produto.descModal}</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-qblue" data-bs-dismiss="modal">Close</button>
