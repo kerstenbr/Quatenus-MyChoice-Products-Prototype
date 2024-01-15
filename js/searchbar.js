@@ -67,9 +67,9 @@ fetch("/produtos.json")
                     const gaModalContent = orderOfFields.map(gaKey => {
                         const gaImgSrc = produto.gaModal[gaKey];
                         return gaImgSrc ? `
-                            <div class="ga-modal-item border border-black border-1 mb-1">
+                            <div class="ga-modal-item card mb-1 p-1 shadow-sm ">
                                 <div class="ga-modal-field"><h5>${gaKey.toLocaleUpperCase()}</h5></div>
-                                <img src="${gaImgSrc}" alt="${gaKey.toLocaleUpperCase()}">
+                                <img class="img-fluid w-60" src="${gaImgSrc}" alt="${gaKey.toLocaleUpperCase()}">
                             </div>` : '';
                     }).join('');
 
@@ -78,7 +78,7 @@ fetch("/produtos.json")
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="${modalId}">${produto.nome}</h5>
+                                    <h5 class="modal-title" id="${modalId}">${produto.nome} - ${produto.apelido}</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
