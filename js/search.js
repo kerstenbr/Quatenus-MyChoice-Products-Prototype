@@ -10,7 +10,7 @@ searchInput.addEventListener("input", (e) => {
     let algumProdutoCorresponde = false;
 
     produtos.forEach(produto => {
-        // console.log(value)
+        console.log(value)
         const isVisible = value.split(' ').every(word => produto.nome.toLowerCase().includes(word)) || value.split('.').every(word => produto.apelido.toLowerCase().includes(word))
         produto.element.classList.toggle("hide", !isVisible)
 
@@ -26,6 +26,8 @@ searchInput.addEventListener("input", (e) => {
 fetch("/produtos.json")
     .then(res => res.json())
     .then(data => {
+        // Organiza de forma alfabética pelo nome o json
+        data.sort((a, b) => a.nome.localeCompare(b.nome));
         produtos = data.map(produto => {
             console.log("Produto encontrado: " + produto.nome)
 
