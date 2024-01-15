@@ -11,10 +11,10 @@ searchInput.addEventListener("input", (e) => {
 
     produtos.forEach(produto => {
         console.log(value)
-        const isVisible = value.split(' ').every(word => produto.nome.toLowerCase().includes(word)) || value.split('.').every(word => produto.apelido.toLowerCase().includes(word))
-        produto.element.classList.toggle("hide", !isVisible)
+        const hasWord = value.split(' ').every(word => produto.nome.toLowerCase().includes(word)) || value.split('.').every(word => produto.apelido.toLowerCase().includes(word))
+        produto.element.classList.toggle("hide", !hasWord)
 
-        if (isVisible) {
+        if (hasWord) {
             algumProdutoCorresponde = true;
         }
     })
