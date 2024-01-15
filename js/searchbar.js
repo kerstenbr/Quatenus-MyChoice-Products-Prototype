@@ -59,7 +59,21 @@ fetch("/produtos.json")
                     modalElement = document.createElement('div');
                     modalElement.id = modalId;
                     modalElement.classList.add('modal', 'fade');
-                    // id="${modalId} //${produto.nome} //${produto.desc}
+
+                    // Aqui é colocado a ordem na qual os Guias de Ativação devem aparecer!
+                    // LEMBRETE: TODOS os produtos devem estar cadastrados aqui.
+                    const orderOfFields = ["gl200", "gl300", "gl320mg", "gl500", "gv55", "gv65", "gv300", "gv300n", "gv300can", "gv350mg", "gv355 ceu"];
+
+                    const gaModalContent = orderOfFields.map(gaKey => {
+                        const gaImgSrc = produto.gaModal[gaKey];
+                        return gaImgSrc ? `
+                            <div class="ga-modal-item border border-black border-1 mb-1">
+                                <div class="ga-modal-field"><h5>${gaKey.toLocaleUpperCase()}</h5></div>
+                                <img src="${gaImgSrc}" alt="${gaKey.toLocaleUpperCase()}">
+                            </div>` : '';
+                    }).join('');
+
+
                     modalElement.innerHTML = `
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
@@ -69,6 +83,8 @@ fetch("/produtos.json")
                                 </div>
                                 <div class="modal-body">
                                     <p>${produto.descModal}</p>
+                                    <div><h5>Guias de Ativação:</h5></div>
+                                    <div class="ga-modal-content">${gaModalContent}</div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-qblue" data-bs-dismiss="modal">Fechar</button>
