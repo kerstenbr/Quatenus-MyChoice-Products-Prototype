@@ -40,5 +40,12 @@
         "desc": "Nosso produto básico, oferece localização e a opção de bloquear o veículo",
         "img": "/img/ftbasicsec.png",
         "descModal": "Nosso produto básico, oferece localização e a opção de bloquear o veículo blablabla Nosso produto básico, oferece localização e a opção de bloquear o veículo blablabla"
+    }, 
+    {
+        "nome": "Asset Machine RPM",
+        "apelido": "at.mach.rpm",
+        "desc": "Produto para clientes que possuem máquinas. Com um sensor de RPM",
+        "img": "/img/atmachrpm.png",
+        "descModal": "Produto para clientes que possuem máquinas. Com um sensor de RPM blablablaProduto para clientes que possuem máquinas. Com um sensor de RPM blablabla"
     }
 ]
