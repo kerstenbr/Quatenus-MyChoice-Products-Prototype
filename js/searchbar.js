@@ -1,3 +1,5 @@
+// TODO: Da pra colocar o search input e o fetch dentro de funções e carregar eles no onload do body
+// Util pra depois quando eu for fazer os sensores, posso criar uma função que só pega os parametros
 const produtosCardTemplate = document.querySelector("[data-produtos-template]");
 const produtosCardContainer = document.querySelector("[data-produtos-cards-container]");
 const searchInput = document.querySelector("[data-search]");
