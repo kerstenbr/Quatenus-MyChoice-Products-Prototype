@@ -21,7 +21,7 @@ searchInput.addEventListener("input", (e) => {
         }
     })
     let avisoErro = document.getElementById("avisoDeErro");
-    avisoErro.classList.toggle('d-none', algumProdutoCorresponde);
+    avisoErro.classList.toggle('hide', algumProdutoCorresponde);
 })
 
 // Parte responsável por ler o Json e retornar as informações para a pesquisa e também para o card
