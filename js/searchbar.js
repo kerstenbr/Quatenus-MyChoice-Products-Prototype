@@ -46,7 +46,8 @@ fetch("/produtos.json")
             img.setAttribute("src", produto.img)
 
             btnVerMais.setAttribute("data-unico-nome", produto.nome);
-            
+
+            // FIXME: Os modals que são aberto não são excluidos depois, preciso arrumar isso.
             // Essa parte é necessária para que o botão Ver Mais crie um modal para o produto!
             btnVerMais.addEventListener("click", () => {
                 // Obtenha o nome do produto associado ao botão clicado
@@ -66,6 +67,7 @@ fetch("/produtos.json")
                     // LEMBRETE: TODOS os produtos devem estar cadastrados aqui.
                     const orderOfFields = ["gl200", "gl300", "gl320mg", "gl500", "gv55", "gv65", "gv300", "gv300n", "gv300can", "gv350mg", "gv355 ceu"];
 
+                    //FIXME: Ao clicar para abrir outro guia ele não fecha o outro
                     const gaModalButton = orderOfFields.map(gaKey => {
                         const gaBtnSrc = produto.gaModal[gaKey];
                         return gaBtnSrc ? `
