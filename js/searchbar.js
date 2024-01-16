@@ -85,8 +85,14 @@ fetch("/produtos.json")
                                 </div>
                                 <div class="modal-body">
                                     <p>${produto.descModal}</p>
-                                    <div><h5>Guias de Ativação:</h5></div>
-                                    <div class="ga-modal-content">${gaModalContent}</div>
+                                    <div>
+                                        <button class="btn btn-qblue mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGuias" aria-expanded="false" aria-controls="collapseGuias">
+                                            Guias de Ativação
+                                        </button>
+                                    </div>
+                                    <div class="collapse" id="collapseGuias">
+                                        <div class="ga-modal-content">${gaModalContent}</div>
+                                    </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-qblue" data-bs-dismiss="modal">Fechar</button>
