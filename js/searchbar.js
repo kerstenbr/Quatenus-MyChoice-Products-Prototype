@@ -87,9 +87,6 @@ fetch("/produtos.json")
                             </div>` : '';
                     }).join('');
 
-
-
-
                     modalElement.innerHTML = `
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
@@ -118,10 +115,22 @@ fetch("/produtos.json")
                     document.body.appendChild(modalElement);
                 }
         
+                // Remover event listeners antigos antes de adicionar um novo
+                btnVerMais.removeEventListener('click', () => {});
+
+                // Adicionar ouvinte de evento para remover o modal do DOM após ser fechado
+                modalElement.addEventListener('hidden.bs.modal', () => {
+                    // Remover o elemento do DOM
+                    document.body.removeChild(modalElement);
+                });
+
                 // Abra o modal correspondente ao produto
                 const modal = new bootstrap.Modal(modalElement);
                 modal.show();
         
+                 // Adicionar ouvinte de evento ao modalElement para liberar recursos
+                modalElement.addEventListener('hidden.bs.modal', () => modal.dispose());
+
                 console.log("Nome do Produto no Modal:", nomeUnicoProduto);
             });
     
