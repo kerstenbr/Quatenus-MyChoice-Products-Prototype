@@ -66,14 +66,26 @@ fetch("/produtos.json")
                     // LEMBRETE: TODOS os produtos devem estar cadastrados aqui.
                     const orderOfFields = ["gl200", "gl300", "gl320mg", "gl500", "gv55", "gv65", "gv300", "gv300n", "gv300can", "gv350mg", "gv355 ceu"];
 
-                    const gaModalContent = orderOfFields.map(gaKey => {
+                    const gaModalButton = orderOfFields.map(gaKey => {
+                        const gaBtnSrc = produto.gaModal[gaKey];
+                        return gaBtnSrc ? `
+                            <div>
+                                <button class="btn btn-qblue mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${gaKey}" aria-expanded="false" aria-controls="collapse${gaKey}">
+                                    ${gaKey.toLocaleUpperCase()}
+                                </button>
+                            </div>` : '';
+                    }).join('');
+
+                    const gaModalContentImg = orderOfFields.map(gaKey => {
                         const gaImgSrc = produto.gaModal[gaKey];
                         return gaImgSrc ? `
-                            <div class="ga-modal-item card mb-1 p-1 shadow-sm ">
-                                <div class="ga-modal-field"><h5>${gaKey.toLocaleUpperCase()}</h5></div>
+
+                            <div class="collapse" id="collapse${gaKey}">
                                 <img class="img-fluid w-60" src="${gaImgSrc}" alt="${gaKey.toLocaleUpperCase()}">
                             </div>` : '';
                     }).join('');
+
+
 
 
                     modalElement.innerHTML = `
@@ -91,7 +103,8 @@ fetch("/produtos.json")
                                         </button>
                                     </div>
                                     <div class="collapse" id="collapseGuias">
-                                        <div class="ga-modal-content">${gaModalContent}</div>
+                                        <div>${gaModalButton}</div>
+                                        <div>${gaModalContentImg}</div>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
