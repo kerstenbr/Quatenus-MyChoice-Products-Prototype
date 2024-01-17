@@ -79,11 +79,9 @@ fetch("/produtos.json")
                                 <div class="modal-body">
                                     <p>${product.descModal}</p>
                                     <div>
-                                        <button class="btn btn-qblue mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGuias" aria-expanded="false" aria-controls="collapseGuias">
-                                            Guias de Ativação
-                                        </button>
+                                        <h5>Guias de Ativação</h5>
                                     </div>
-                                    <div class="collapse" id="collapseGuias">
+                                    <div>
                                         <div>${gaModalButton}</div>
                                         <div>${gaModalContentImg}</div>
                                     </div>
