@@ -28,7 +28,7 @@
     </div>
   </header>
 
-  <!-- Conteudo -->
+  <!-- Main page -->
   <main>
     <div class="album py-5 bg-light">
       <div class="container">
@@ -40,8 +40,8 @@
             </div>
         </div>
 
-        <!-- Erro -->
-        <div class="col-12 hide" id="avisoDeErro">
+        <!-- Error div -->
+        <div class="col-12 hide" id="errorWarning">
           <div class="alert alert-danger p-5 rounded shadow">
             <i class="bi bi-x-circle-fill"></i> <strong>Erro</strong>
             <hr>
@@ -56,10 +56,10 @@
         </div>
 
         <!-- Template -->
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" data-produtos-cards-container>
-          <template data-produtos-template>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" data-products-cards-container>
+          <template data-products-template>
+            
             <div class="col">
-
               <!-- Card -->
               <div class="card shadow-sm" style="height: 450px;" id="card">
                 <a data-img-link target=”_blank” rel="noopener noreferrer">
@@ -67,18 +67,14 @@
                 </a>
   
                 <div class="card-body">
-                  <!-- Nome aqui -->
-                  <h3 data-nome>erro</h3>
-  
-                  <!-- Descrição aqui -->
-                  <p class="card-text" data-desc>erro</p>
+                  <h3 data-name></h3>
+                  <p class="card-text" data-desc></p>
                 </div>
 
                 <div class="ms-3 mb-3">
-                  <button type="button" class="btn btn-sm btn-qblue" data-unico-nome="${produto.nome}" data-btn-ver-mais>Ver mais</button>
+                  <button type="button" class="btn btn-sm btn-qblue" data-unique-name="${produto.nome}" data-btn-ver-mais>Ver mais</button>
                 </div>
               </div>
-
             </div>
             
           </template>
@@ -88,7 +84,7 @@
     </div>        
   </main>
 
-  <!-- Rodapé -->
+  <!-- Footer -->
   <footer class="text-muted py-5" id="footer">
     <div class="container">
       <p class="float-end mb-1">
