@@ -63,8 +63,9 @@ fetch("/produtos.json")
                         const gaImgSrc = product.gaModal[gaKey];
                         return gaImgSrc ? `
 
-                            <div class="collapse" id="collapse${gaKey}">
-                                <img class="img-fluid w-60" src="${gaImgSrc}" alt="${gaKey.toLocaleUpperCase()}">
+                            <div class="collapse card shadow-sm mb-2" id="collapse${gaKey}">
+                                <h6 class="mt-1 ms-2">${gaKey.toLocaleUpperCase()}</h6>
+                                <img class="img-fluid" src="${gaImgSrc}" alt="${gaKey.toLocaleUpperCase()}">
                             </div>` : '';
                     }).join('');
 
