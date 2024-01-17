@@ -71,7 +71,7 @@ fetch("/produtos.json")
                     const gaModalButton = orderOfFields.map(gaKey => {
                         const gaBtnSrc = produto.gaModal[gaKey];
                         return gaBtnSrc ? `
-                            <div>
+                            <div class="d-inline-block">
                                 <button class="btn btn-qblue mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${gaKey}" aria-expanded="false" aria-controls="collapse${gaKey}">
                                     ${gaKey.toLocaleUpperCase()}
                                 </button>
