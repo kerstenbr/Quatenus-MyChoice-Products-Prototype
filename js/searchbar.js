@@ -87,7 +87,7 @@ function createProductModal(product) {
             const gaBtnSrc = product.gaModal[gaKey];
             return gaBtnSrc ? `
                 <div class="d-inline-block">
-                    <button class="btn btn-qblue mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${gaKey}" aria-expanded="false" aria-controls="collapse${gaKey}">
+                    <button class="btn btn-qblue mb-3" id="btn${gaKey}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${gaKey}" aria-expanded="false" aria-controls="collapse${gaKey}">
                         ${gaKey.toLocaleUpperCase()}
                     </button>
                 </div>` : '';
@@ -98,11 +98,12 @@ function createProductModal(product) {
             return gaImgSrc ? `
 
                 <div class="collapse card shadow-sm mb-2" id="collapse${gaKey}">
+                    <button type="button" class="btn-close" data-bs-toggle="collapse" data-bs-target="#collapse${gaKey}" aria-label="Close"></button>
                     <h6 class="mt-1 ms-2">${gaKey.toLocaleUpperCase()}</h6>
                     <img class="img-fluid" src="${gaImgSrc}" alt="${gaKey.toLocaleUpperCase()}">
                 </div>` : '';
         }).join('');
-
+        
         modalElement.innerHTML = `
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
@@ -132,7 +133,34 @@ function createProductModal(product) {
     const modal = new bootstrap.Modal(modalElement);
     modal.show();
 
+    const closeHandler = () => {
+        document.body.removeEventListener('click', buttonClickHandler);
+        document.removeEventListener('hidden.bs.modal', closeHandler);
+    };
+
+    const buttonClickHandler = (event) => {
+        const targetId = event.target.id;
+        if (targetId && targetId.startsWith('btn')) {
+            //const gaKey = targetId.substring(3);
+            const btnElement = document.getElementById(targetId);
+
+            if (btnElement.classList.contains("btn-qblue")) {
+                // console.log("Botão clicado pela primeira vez");
+                btnElement.classList.remove("btn-qblue");
+                btnElement.classList.add("btn-qorange");
+            } else if (btnElement.classList.contains("btn-qorange")) {
+                // console.log("Botão clicado pela segunda vez");
+                btnElement.classList.remove("btn-qorange");
+                btnElement.classList.add("btn-qblue");
+            }
+        }
+    };
+
+    document.body.addEventListener('click', buttonClickHandler);
+    document.addEventListener('hidden.bs.modal', closeHandler);
+
     modalElement.addEventListener('hidden.bs.modal', () => {
+        closeHandler();
         document.body.removeChild(modalElement);
         modal.dispose();
     });
