@@ -87,7 +87,7 @@ function createProductModal(product) {
             const gaBtnSrc = product.gaModal[gaKey];
             return gaBtnSrc ? `
                 <div class="d-inline-block">
-                    <button class="btn btn-qblue mb-3" id="btn${gaKey}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${gaKey}" aria-expanded="false" aria-controls="collapse${gaKey}">
+                    <button class="btn btn-qblue mb-3" id="btn${gaKey}" data-bs-toggle="collapse" data-bs-target="#collapse${gaKey}" aria-expanded="false" aria-controls="collapse${gaKey}">
                         ${gaKey.toLocaleUpperCase()}
                     </button>
                 </div>` : '';
