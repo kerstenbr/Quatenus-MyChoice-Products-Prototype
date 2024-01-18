@@ -13,7 +13,8 @@ function loadProductsFromJson() {
     fetch("/produtos.json")
         .then(res => res.json())
         .then(data => {
-            data.sort((a, b) => a.nome.localeCompare(b.nome));
+            // LEMBRETE: Desativei a organização pois estava atrapalhando na pesquisa
+            // data.sort((a, b) => a.nome.localeCompare(b.nome));
             products = data.map(product => {
                 console.log("Produto encontrado: " + product.nome);
                 return createProductCard(product);

@@ -14,6 +14,20 @@
         }
     },
     {
+        "nome": "Fleet Basic Security",
+        "apelido": "ft.basic.sec",
+        "desc": "Nosso produto básico, oferece localização e a opção de bloquear o veículo",
+        "img": "/img/ftbasicsec.png",
+        "descModal": "Nosso produto básico, oferece localização e a opção de bloquear o veículo blablabla Nosso produto básico, oferece localização e a opção de bloquear o veículo blablabla",
+        "gaModal": {
+            "gv55": "ga/ftbasicsec/gv55.png",
+            "gv65": "ga/ftbasicsec/gv65.png",
+            "gv300": "ga/ftbasicsec/gv300.png",
+            "gv300n": "ga/ftbasicsec/gv300n.png",
+            "gv350mg": "ga/ftbasicsec/gv350mg.png"
+        }
+    },
+    {
         "nome": "Fleet Full Jornada",
         "apelido": "ft.full.jor",
         "desc": "Produto indicado para clientes que querem ter controle sobre a jornada de seus motoristas",
@@ -25,6 +39,18 @@
             "gv65": "ga/ftfulljor/gv65.png"
         }
     },
+    {
+        "nome": "Fleet Full Can Jornada",
+        "apelido": "ft.full.can.jor",
+        "desc": "Proporciona o controle sobre a jornada do motorista e também consegue trazer os dados da can do veículo.",
+        "img": "/img/ftfullcanjor.png",
+        "descModal": "Proporciona o controle sobre a jornada do motorista e também consegue trazer os dados da can do veículo. blablabla Proporciona o controle sobre a jornada do motorista e também consegue trazer os dados da can do veículo. blablabla",
+        "gaModal": {
+            "gv65": "ga/ftfullcanjor/gv65.png",
+            "gv300n": "ga/ftfullcanjor/gv300n.png",
+            "gv300can": "ga/ftfullcanjor/gv300can.png"
+        }
+    }, 
     {
         "nome": "Fleet Full Guincho",
         "apelido": "ft.full.gui",
@@ -48,33 +74,7 @@
             "gv300n": "ga/ftfullcan/gv300n.png",
             "gv300can": "ga/ftfullcan/gv300can.png"
         }
-    }, 
-    {
-        "nome": "Fleet Full Can Jornada",
-        "apelido": "ft.full.can.jor",
-        "desc": "Proporciona o controle sobre a jornada do motorista e também consegue trazer os dados da can do veículo.",
-        "img": "/img/ftfullcanjor.png",
-        "descModal": "Proporciona o controle sobre a jornada do motorista e também consegue trazer os dados da can do veículo. blablabla Proporciona o controle sobre a jornada do motorista e também consegue trazer os dados da can do veículo. blablabla",
-        "gaModal": {
-            "gv65": "ga/ftfullcanjor/gv65.png",
-            "gv300n": "ga/ftfullcanjor/gv300n.png",
-            "gv300can": "ga/ftfullcanjor/gv300can.png"
-        }
-    }, 
-    {
-        "nome": "Fleet Basic Security",
-        "apelido": "ft.basic.sec",
-        "desc": "Nosso produto básico, oferece localização e a opção de bloquear o veículo",
-        "img": "/img/ftbasicsec.png",
-        "descModal": "Nosso produto básico, oferece localização e a opção de bloquear o veículo blablabla Nosso produto básico, oferece localização e a opção de bloquear o veículo blablabla",
-        "gaModal": {
-            "gv55": "ga/ftbasicsec/gv55.png",
-            "gv65": "ga/ftbasicsec/gv65.png",
-            "gv300": "ga/ftbasicsec/gv300.png",
-            "gv300n": "ga/ftbasicsec/gv300n.png",
-            "gv350mg": "ga/ftbasicsec/gv350mg.png"
-        }
-    }, 
+    },  
     {
         "nome": "Asset Machine RPM",
         "apelido": "at.mach.rpm",
