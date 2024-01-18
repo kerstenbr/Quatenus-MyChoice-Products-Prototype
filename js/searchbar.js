@@ -135,6 +135,7 @@ function createProductModal(product) {
         document.removeEventListener('hidden.bs.modal', closeHandler);
     };
 
+    // FIXME: Se a clicar muito rápido a cor do botão não muda
     const buttonClickHandler = (event) => {
         const targetId = event.target.id;
         if (targetId && targetId.startsWith('btn')) {
