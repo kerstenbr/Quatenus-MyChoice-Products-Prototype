@@ -4,6 +4,10 @@ const searchInput = document.querySelector("[data-search]");
 
 let products = [];
 
+// ------ Todos os rastreadores devem ser cadastrados aqui na ordem de visualização deles dentro do modal! ------
+const orderOfFields = ["gl200", "gl300", "gl320mg", "gl500", "gv55", "gv65", "gv300", "gv300n", "gv300can", "gv350mg", "gv355 ceu"];
+// ------ Todos os rastreadores devem ser cadastrados aqui na ordem de visualização deles dentro do modal! ------
+
 // Função para carregar os produtos a partir do arquivo json
 function loadProductsFromJson() {
     fetch("/produtos.json")
@@ -77,10 +81,6 @@ function createProductModal(product) {
         modalElement = document.createElement('div');
         modalElement.id = modalId;
         modalElement.classList.add('modal', 'fade');
-
-        // Aqui é colocado a ordem na qual os Guias de Ativação devem aparecer
-        // LEMBRETE: TODOS os produtos devem estar cadastrados aqui.
-        const orderOfFields = ["gl200", "gl300", "gl320mg", "gl500", "gv55", "gv65", "gv300", "gv300n", "gv300can", "gv350mg", "gv355 ceu"];
 
         const gaModalButton = orderOfFields.map(gaKey => {
             const gaBtnSrc = product.gaModal[gaKey];
