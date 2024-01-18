@@ -82,7 +82,6 @@ function createProductModal(product) {
         // LEMBRETE: TODOS os produtos devem estar cadastrados aqui.
         const orderOfFields = ["gl200", "gl300", "gl320mg", "gl500", "gv55", "gv65", "gv300", "gv300n", "gv300can", "gv350mg", "gv355 ceu"];
 
-        //FIXME: Ao clicar para abrir outro guia ele não fecha o atual
         const gaModalButton = orderOfFields.map(gaKey => {
             const gaBtnSrc = product.gaModal[gaKey];
             return gaBtnSrc ? `
@@ -96,9 +95,7 @@ function createProductModal(product) {
         const gaModalContentImg = orderOfFields.map(gaKey => {
             const gaImgSrc = product.gaModal[gaKey];
             return gaImgSrc ? `
-
                 <div class="collapse card shadow-sm mb-2" id="collapse${gaKey}">
-                    <button type="button" class="btn-close" data-bs-toggle="collapse" data-bs-target="#collapse${gaKey}" aria-label="Close"></button>
                     <h6 class="mt-1 ms-2">${gaKey.toLocaleUpperCase()}</h6>
                     <img class="img-fluid" src="${gaImgSrc}" alt="${gaKey.toLocaleUpperCase()}">
                 </div>` : '';
