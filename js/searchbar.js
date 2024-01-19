@@ -139,8 +139,8 @@ function createProductModal(product) {
     // FIXME: Se a clicar muito rápido a cor do botão não muda
     const buttonClickHandler = (event) => {
         const targetId = event.target.id;
-        if (targetId && targetId.startsWith('btn')) {
-            //const gaKey = targetId.substring(3);
+        // if (targetId && targetId.startsWith('btn')) {
+        if (targetId.startsWith('btn')) {
             const btnElement = document.getElementById(targetId);
 
             if (btnElement.classList.contains("btn-qblue")) {
